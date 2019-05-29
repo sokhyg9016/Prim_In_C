@@ -4,7 +4,7 @@
  <h3>입력</h3>
  <p>입력으로는 파일로서 데이터를 입력 받게 만들었습니다. "data.txt"에는 아래의 그림과 같은 그래프의 데이터가 들어있습니다.</p>
  <hr>
-<img src = "http://cslab2.kku.ac.kr/~201721210/prim_1.JPG" width = "874px" height = "633px"><br>
+<img src = "http://cslab2.kku.ac.kr/~201721210/prim_1.JPG" width = "774px" height = "533px"><br>
 <ol>
   <li>"data.txt"파일에 위의 그림과 같은 데이터 형식을 파일 입출력을 통해 얻을 수 있도록 텍스트 파일의 구조로 변경합니다.</li>
 <pre>
