@@ -98,38 +98,22 @@ EDGE *read_graph(char *GFile, int *m, int *n)
       <p>입력으로 들어온 파일에 데이터를 이용해 기본적인 그래프 배열의 값을 설정하는 함수이다.</p>
     </li>
     <li>
-      <b>int e_order(const void *, const void *);</b><br>
-      <p>stdlib.h에 있는 qsort()함수를 쓰기 위해서는 비교함수가 필요하다. 따라서 이 함수는 비교함수로 사용된다.</p>
+      <b>int find_min_vertex(int n);</b><br>
+      <p>입력으로 들어온 노드의 수의 범위에서 가장 가중치가 적은 노드를 찾아 반환하는 함수이다.</p>
     </li>
     <li>
-      <b>void KruskalMST(EDGE * elist, EDGE * T, int nedges, int nvertex);</b><br>
-      <p>크리스컬 알로리즘을 구현한 코드의 핵심 함수. 이 함수에서 부가적으로 다른 함수들을 호출하여 BST를 생성한다.</p>
-    </li>
-    <li>
-      <b>void set_init(int n);</b><br>
-      <p>BST 생성을 위한  __parent, num 배열을 초기화 한다.</p>
-    </li>
-    <li>
-      <b>int check_cycle(EDGE E);</b><br>
-      <p>현재 Graph 배열에서 가중치가 가장 작은 선분을 가져오면 그 선분 E에 대하여 사이클이 만들어지는지 아닌지 확인한다.</p>
-    </li>
-    
-        가져온 선분 E를 추가했을때 사이클을 만들지 않으면 E를 Tree에 추가시키고 트리의 선분 수를 증가시킨다. 만약 사이클을 만들면 선분E를 
-        버린다. 이때 선분 E는 해당 코드에선 이미 퀵 소트를 통해 오름차순으로 정렬된 Graph배열에서 하나씩 가져오는 것으로 Graph 배열의 각 
-        요소의 값은 [노드1{u}, 노드2{2}, 노드1와 노드2 사이의 가중치] 로 이루어져 있다. 사이클의 생성 여부는 set_find()함수를 통해 각 노드!
-        과 노드2가 속해져 있는 집합의 대표 노드(루트)를 가져와 같은지 같지 않은지 비교한다. 만약 같지 않다면 두 집합을 합치기 위해 set_union()
-        함수를 호출한다.
-    
-   <li>
-   
+      <b>void primMST(int p, int node);</b><br>
+      <p>프림 알로리즘을 구현한 코드의 핵심 함수. 이 함수또한 부가적으로 다른 함수들을 호출하여 BST를 생성하며, 첫 번째 인자로 임의의 노드를, 두번째 인자로 그래프의 전체 노드의 개수를 받는다.</p>
+    </li>   
  </ol>
  <br>
  <h3>출력결과</h3>
- <p>출력 결과로서 처음 파일의 데이터를 읽고 변수에 저장한 값을 출력하고, 퀵 소트(quick sort)이후 오름차순으로 정렬된 값으로 정렬된 값들을 출력한 뒤에 마지막으로 최소신장트리(BST)의 가중치의 합(sum)을 출력해준다.</p>
+ <p>출력 결과로서 프림 알고리즘 수행 시 만들어지는 테이블 구조를 출력해주면서 마지막에 BST에 대한 최단 경로를 출력해준다.</p>
  <hr>
- <img src = "http://cslab2.kku.ac.kr/~201721210/output.jpg" width = "373px" height = "442px"><br>
- 
+ <img src = "http://cslab2.kku.ac.kr/~201721210/Prim_OUTPUT.JPG" width = "60%" height = "60%"><br>
  <br>
+ <p>이는 다음 그림과 동일하다.</p>
+ <img src = "http://cslab2.kku.ac.kr/~201721210/Prim_OUTPUT2.JPG" width = "70%" height = "70%"><br>
  <br>
  
  <h3>참고</h3>
